@@ -3,45 +3,45 @@
 % Report template with support for Portuguese and English languages
 % Change language {brazil or english} in \documentclass as per the examples
 % This template has support for the ABNT citing format
-% 
+%
 % Original version: jan/2019
 % https://github.com/
-% 
+%
 % Based on ABNTEX2 and the thesis template
 % --------------------------------------------------------------------------
 \documentclass[
 %\DeclareUnicodeCharacter{200B}{}
 % --------------------------------------------------------------------------
-% classe memoir . options                                                   
+% classe memoir . options
 12pt,					% tamanho da fonte
 openright,				% cap. começam em pág ímpar (ins pág vazia caso preciso)
 twoside,				% para impressão em verso e anverso. Oposto a oneside
 a4paper,				% tamanho do papel
 % --------------------------------------------------------------------------
-% classe abntex2 . options                                                  
+% classe abntex2 . options
 %chapter=TITLE,			% títulos de capítulos convertidos em letras maiúsc.
 %section=TITLE,			% títulos de seções convertidos em letras maiúsc.
 %subsection=TITLE,		% títulos de subseções convertidos em letras maiúsc.
 %subsubsection=TITLE,	% títulos de subsubseções convertidos em letras maiúsc.
 % --------------------------------------------------------------------------
-% Opções de IDIOMA do pacote babel                                          
+% Opções de IDIOMA do pacote babel
 english,
 brazil
 ]{ABNT/abntex2_report}
 % --------------------------------------------------------------------------
-% Pacotes básicos    
-\usepackage{lmodern}			% Usa a fonte Latin Modern			
+% Pacotes básicos
+\usepackage{lmodern}			% Usa a fonte Latin Modern
 \usepackage[T1]{fontenc}		% Selecao de codigos de fonte.
 \usepackage[utf8]{inputenc}		% Codificacao do documento (conversão automática dos acentos)
 \usepackage{indentfirst}		% Indenta o primeiro parágrafo de cada seção.
 \usepackage{color}				% Controle das cores
 \usepackage{graphicx}			% Inclusão de gráficos
 \usepackage{microtype} 			% para melhorias de justificação
-\usepackage{lipsum}	
+\usepackage{lipsum}
 \usepackage[brazilian,hyperpageref]{backref} % páginas com citações na bibliog.
 %\usepackage[alf,abnt-etal-list=0,abnt-etal-cite=3,abnt-emphasize=bf]{abntex2cite}
 \usepackage[alf]{abntex2cite}
-%	
+%
 \usepackage{lastpage}			% Usado pela Ficha catalográfica
 %\usepackage{subfig}
 \usepackage{supertabular}       % tabela na capa do documento
@@ -76,17 +76,17 @@ brazil
 \usepackage{float}
 \DeclareUnicodeCharacter{200B}{}
 % --------------------------------------------------------------------------%
-% Configurações do PDF final                                                
+% Configurações do PDF final
 \definecolor{blue}{RGB}{41,5,195}
 \makeatletter
 \hypersetup{
 	%pagebackref=true,
-	pdftitle={\@title}, 
+	pdftitle={\@title},
 	pdfauthor={\@author},
 	pdfsubject={\@title},
 	%pdfsubject={\imprimirpreambulo},
 	pdfcreator={LaTeX with abnTeX2},
-	pdfkeywords={abnt}{latex}{abntex}{abntex2}{\imprimirpalavraschave}, 
+	pdfkeywords={abnt}{latex}{abntex}{abntex2}{\imprimirpalavraschave},
 	colorlinks=true,       		% false: boxed links; true: colored links
 	linkcolor=blue,          	% color of internal links
 	citecolor=blue,        		% color of links to bibliography
@@ -102,29 +102,29 @@ brazil
 \setlength{\@fptop}{5pt} % Set distance from top of page to first float
 \makeatother
 % --------------------------------------------------------------------------
-% Formatação                                                                
+% Formatação
 \newcommand\tab[1][1cm]{\hspace*{#1}}
-\apptocmd{\thebibliography}{\justifying}{}{} 
+\apptocmd{\thebibliography}{\justifying}{}{}
 \renewcommand{\ABNTEXsectionfont}{\bfseries}
 \titlespacing*{\chapter}{0pt}{0pt}{12pt}
 \titlespacing*{\section}{0pt}{6pt}{6pt}
 \titlespacing*{\subsection}{0pt}{6pt}{6pt}
 \titlespacing*{\subsubsection}{0pt}{6pt}{6pt}
 % --------------------------------------------------------------------------
-% Rearranja os finais de cada estrutura                                     
+% Rearranja os finais de cada estrutura
 \algrenewtext{EndWhile}{\algorithmicend\ \algorithmicwhile}
 \algrenewtext{EndFor}{\algorithmicend\ \algorithmicfor}
 \algrenewtext{EndIf}{\algorithmicend\ \algorithmicif}
 \algrenewtext{EndFunction}{\algorithmicend\ \algorithmicfunction}
 % --------------------------------------------------------------------------
-% Espaçamentos entre linhas e parágrafos                                    
+% Espaçamentos entre linhas e parágrafos
 \setlength{\parindent}{1.3cm} % linha
 \setlength{\parskip}{0.2cm} % parágrafo, tente também \onelineskip
 % --------------------------------------------------------------------------
-% Informações de dados para CAPA e FOLHA DE ROSTO                           
+% Informações de dados para CAPA e FOLHA DE ROSTO
 \prodtecnica{001 / 2020}
 \titulo{Aplicações Práticas da SunBurn}
-\tiporelatorio{Final} 
+\tiporelatorio{Final}
 \nomeprojeto{Sistemas Produtivos}
 \outrossubtitulos{~} % opcional
 \autores{
@@ -141,29 +141,23 @@ brazil
 \data{Setembro de 2020}
 % \classificacao{( ) Confidencial  (X) Restrito  ( )  Uso Interno  ( ) Público}
 % \revisao{01}
-% \tabelacutter{000} 
+% \tabelacutter{000}
 % \palavraschave{1. Manipulator. 2. Simulation. 3. Computer vision.}
-% \classificacaoassunto{000} % sNúmero de Classificação do assunto 
+% \classificacaoassunto{000} % sNúmero de Classificação do assunto
 %\parceirologo{logos/x.png}
 %------------------------------------------------------------------
 % Finalização das configurações da capa
 %
 %
-%------------------------------------------------------------------              
-% Acrônimos :: Chamar no texto como \ac{DoF}                                
-% \begin{acgroupdef}[list=acronyms]
-% 	\acdef{DoF}{Degrees of Freedom}
-% 	\acdef{PoC}{Proof of Concept, em português Prova de Conceito}
-% 	\acdef{UUV}{Unmanned Underwater Vehicle, em português Veículo Subaquático Não-tripulado}
-% 	\acdef{AUV}{Autonomous Underwater Vehicle, em português Veículo Subaquático Autônomo}
-% 	\acdef{UVM}{Unmanned Vehicle Morphing}
-% 	\acdef{SLAM}{Simultaneous Localization and Mapping}
-% 	\acdef{ROV}{Remotely Operated Vehicle}
-% 	\acdef{SOTA}{Study Of The Art}
-% 	%
-% 	%
-% 	%
-% \end{acgroupdef}
+%------------------------------------------------------------------
+% Acrônimos :: Chamar no texto como \ac{DoF}
+\begin{acgroupdef}[list=acronyms]
+	\acdef{CEP}{Controle Estatístico de Processos}
+	\acdef{MRP}{Manufacturing Resource Planning}
+	%
+	%
+	%
+\end{acgroupdef}
 % --------------------------------------------------------------------------
 % Criação do sumário
 \makeindex
@@ -173,7 +167,7 @@ brazil
 	\imprimircapa
 	% \imprimircatalografica
 % --------------------------------------------------------------------------
-% Sumário executivo                                                         
+% Sumário executivo
 	% \ABNTEXchapterfont\large\textbf{\execsummarytitlename}
 	% \begin{flushleft}
 	% 	\normalsize
@@ -181,13 +175,13 @@ brazil
 	% 	\normalfont
 	% 	O projeto de Manipuladores - Desafio.2, também conhecido como \textbf{xxxxx} se configura sob o Programa de Formação de Novos Talentos do Serviço Nacional de Aprendizagem Industrial, Departamento Regional da Bahia - Senai/DR/BA, sendo este o principal fomentador do programa.
 
-	% 	O projeto foi considerado como início técnico do projeto o dia 00 de bolsoneiro de 2020. 
+	% 	O projeto foi considerado como início técnico do projeto o dia 00 de bolsoneiro de 2020.
 
 	% 	O prazo de execução planejado é de xx meses.
 	% \end{flushleft}
 	% \clearpage
 %------------------------------------------------------------------
-% Resumo e abstract                                                         
+% Resumo e abstract
 	\ABNTEXchapterfont\large\textbf{\resumoatitlename}
 	\begin{flushleft}
 		\normalsize
@@ -213,7 +207,7 @@ brazil
 	% \end{flushleft}
 	% \clearpage
 % --------------------------------------------------------------------------
-% Lista de figuras                                                          
+% Lista de figuras
 	% \begin{flushleft}
 	% 	\ABNTEXchapterfont\Large\textbf{\MakeUppercase\listadefigurasname}
 	% \end{flushleft}
@@ -223,7 +217,7 @@ brazil
 	% \listoffigures*
 	% \cleardoublepage
 % --------------------------------------------------------------------------
-% Lista de tabelas                                                          
+% Lista de tabelas
 	% \begin{flushleft}
 	% 	\ABNTEXchapterfont\Large\textbf{\MakeUppercase\listadetabelasname}
 	% \end{flushleft}
@@ -233,7 +227,7 @@ brazil
 	% \listoftables*
 	% \cleardoublepage
 % --------------------------------------------------------------------------
-% Lista de símbolos e abreviaturas                                          
+% Lista de símbolos e abreviaturas
 	% \begin{flushleft}
 	% \ABNTEXchapterfont\Large\textbf{\MakeUppercase\listadesimbolsabrevtitlename}
 	% 	\noindent
@@ -245,7 +239,7 @@ brazil
 	% \end{flushleft}
 	% \newpage
 % --------------------------------------------------------------------------
-% Tabela de conteúdo                                                        	
+% Tabela de conteúdo
 	% \begin{flushleft}
 	% 	\ABNTEXchapterfont\Large\textbf{\MakeUppercase\glosariotitlename}
 	% \end{flushleft}
@@ -266,16 +260,25 @@ brazil
 	\justify
 	\normalfont
 % --------------------------------------------------------------------------
-% Conteúdo do relatório  
+% Conteúdo do relatório
 	\include{sections/01introducao}
-	\include{sections/02admprod}
-	\include{sections/03tipodesistemasprodutivos}
-	% \include{sections/04resultados}
-	% \include{sections/05confiabilidade}
-	% \include{sections/06conhecimento}
-	% \include{sections/07conclusao}
-	%\include{sections/02referencial}
-	%\include{sections/03metodo}
+	\include{sections/02gestaodasoperaçoes}
+	\include{sections/03medidasdedesempenhodaoperaçao}
+	\include{sections/04estrategiadaproducao}
+	\include{sections/05tipodeprocessodeproducao}
+	\include{sections/06projetodoproduto}	
+	\include{sections/07pnovasinstalacoes}
+	\include{sections/08parranjofisico}
+	\include{sections/09tecrecurso}
+	\include{sections/10introplanejamento}
+	\include{sections/11planejamentoagregado}
+	\include{sections/12controleestoques}
+	\include{sections/13manufacturingresource}
+	\include{sections/14fornecimentojit}
+	\include{sections/15controleestatistico}
+	\include{sections/16confiablidademanutencao}
+	\include{sections/17conclusao}
+
 % --------------------------------------------------------------------------
 % Referências
 	% \cleardoublepage
@@ -294,10 +297,10 @@ brazil
 	% \chapter{Um assunto importante}
 	% \label{apend:assunto}
 	% \lipsum[1] % Comentar e adicionar apêndice aqui
-	
+
 
 % --------------------------------------------------------------------------
-% % Anexos                                                                     
+% % Anexos
 % 	\anexos
 % 	\justify
 % 	%
@@ -306,4 +309,4 @@ brazil
 % 	%\includepdf[pages={{},-}]{annex/manisubanterioridade.pdf}
 % 	\lipsum[1] % Comentar e adicionar apêndice aqui
 % 	%
-\end{document} 
+\end{document}
