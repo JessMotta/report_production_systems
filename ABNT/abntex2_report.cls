@@ -776,12 +776,12 @@
 			\begin{figure}[htp]
 				\centering
 				\ifelsenotempty{\imprimirparceirologo}{
-					\raisebox{-0.5\height}{\includegraphics[height=1.2cm]{\imprimirparceirologo}}
+					\raisebox{-0.5\height}{\includegraphics[height=1.8cm]{\imprimirparceirologo}}
 					\hspace{\fill}
-					\raisebox{-0.5\height}{\includegraphics[height=1.2cm]{logos/LogoFiebSenai.png}}
+					\raisebox{-0.5\height}{\includegraphics[height=1.8cm]{logos/LogoFiebSenai.png}}
 				}{
 					\hspace{\fill}
-					\raisebox{-0.5\height}{\includegraphics[height=1.2cm]{logos/LogoFiebSenai.png}}
+					\raisebox{-0.5\height}{\includegraphics[height=1.8cm]{logos/LogoFiebSenai.png}}
 				}
 			\end{figure}
 		\end{center}
