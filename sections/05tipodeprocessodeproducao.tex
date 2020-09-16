@@ -6,8 +6,9 @@ A classificação dos diversos tipos de empresas industriais partindo de seus pr
 A Figura \ref{fig:tipos_de_processo_de_producao} mostra como os cinco tipos de processos existentes estão arranjados de acordo com o espectro variedade $\times$ volume. Além disso, as características de cada um destes processos serão descritos com base no volume e variedade, descendo pela diagonal que parte do canto superior esquerdo até canto inferior direito. Em outras palavras, os processos serão descritos a seguir partindo das empresas com uma maior variedade e baixo volume até uma empresa com baixa variedade e alto volume.
 
 \begin{figure}[H]
+  \centering
   \caption{Matriz Variedade $\times$ Volume: Definindo os cinco tipos de processos produtivo.} %!ALTERAR A IMAGEM POIS FALTA LEGENDA NO EIXO Y
-  \includegraphics[width=1\textwidth]{images/tiposdeprocesso.png}
+  \includegraphics[width=.7\textwidth]{images/tiposdeprocesso.png}
   \caption*{Fonte: Adaptado de \cite{slack2009administracao}}
   \label{fig:tipos_de_processo_de_producao}
 \end{figure}
@@ -26,6 +27,14 @@ Finalmente, os processos contínuos têm como característica lidarem quase semp
 \section{Aplicação Prática}
 \label{sec:tipos_de_processo_de_producao_aplicacao}
 
-A produção da SunBurn deve ser caracterizada como um processo contínuo, uma vez que a mesma produz apenas um único produto, energia elétrica, através da conversão de energia solar para energia elétrica. Tal processo ocorre de forma contínua nos diversos equipamentos utilizados, com pouco ou nenhuma intervenção humana, em grande escala. Além disso, a energia elétrica é um produto com características correlacionadas com a ideia de materiais fluidos, uma vez que ela necessita de recipientes apropriados para seu armazenamento ``individualizado'', tais como baterias e capacitores.
+A produção da SunBurn é caracterizada como um processo contínuo, uma vez que a mesma produz apenas um único produto, energia elétrica, através da conversão de energia solar para energia elétrica, Figura \ref{fig:diagrama_unifilar}. Tal processo ocorre de forma contínua nos diversos equipamentos utilizados, com pouco ou nenhuma intervenção humana, em grande escala. Além disso, a energia elétrica é um produto com características correlacionadas com a ideia de materiais fluidos, uma vez que ela necessita de recipientes apropriados para seu armazenamento ``individualizado'', tais como baterias e capacitores.
 
-%! Mostrar uma imagem do processo produtivo
+\begin{figure}[H]
+  \centering
+  \caption{Diagrama unifilar do processo de conversão de energia solar em energia elétrica.}
+  \includegraphics[width=\textwidth]{images/Diagrama-Unifilar.jpg}
+  \legend{Fonte: Adaptado de \cite{bfautomacao}.}
+  \label{fig:diagrama_unifilar}
+\end{figure}
+
+A Figura \ref{fig:diagrama_unifilar} apresenta o Diagrama Unifilar do processo de conversão de energia solar em elétrica utilizando cinco componentes básicos: painéis ou módulos fotovoltaicos, \textit{string boxes}, inversores, transformador e proteção do sistema. Os painéis fazem a conversão da energia solar em energia elétrica com corrente contínua. Os \textit{string boxes} são utilizados para acoplar os diversos painéis solares de forma a casar impedância e proteger contra surtos de corrente e tensão. Os inversores convertem a energia de corrente contínua para corrente alternada com frequência e forma de onda similares aos utilizados na transmissão mas com baixa tensão. A qual é elevada até os níveis de transmissão pelo transformador. Por fim, a atuação de isolamento (desligamento) do sistema gerador com o sistema de transmissão é indicada na figura por um bloco denominado ``proteção''.
