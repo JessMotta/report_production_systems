@@ -1,3 +1,9 @@
+report_production_systems.pdf
+
+sections/*.aux
+
+.vscode/
+
 ## Core latex/pdflatex auxiliary files:
 *.aux
 *.lof
